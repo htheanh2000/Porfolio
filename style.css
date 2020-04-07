@@ -1,0 +1,790 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    background-color: #0f0f0f;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+h1,h2,h3,h4 {
+    color: #fff;
+}
+/*header*/
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+   
+}
+.vid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+.vid-bg video {   
+    width: 100vw;  
+}
+.brand {
+    font-size: 2rem;
+    display: block;
+    cursor: pointer;
+    margin-left: 200px;
+    letter-spacing: 4px;
+    font-weight: 100;
+    z-index: 1;
+   
+}
+
+.list-items {
+    
+    display: flex;
+    justify-content: space-between;
+}
+.item {
+    z-index: 1;
+    margin: 20px 30px;
+    display: block;
+    font-weight: 100;
+}
+
+.item:hover a{
+    color: #A768BA;
+}
+
+.item:last-child{
+    margin-right: 150px;
+}
+
+section {
+    width: 100vw;
+}
+
+.sologan{
+    
+    z-index: 1; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+}
+
+.sologan h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.line {
+    position: relative;
+    top: 50%;
+    width: 18em;
+    border-right: 2px solid rgba(255,255,255,0.75);
+    margin: 0 auto;
+    font-size: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+.anim-typewriter {
+    animation: typewriter 4s steps(40) 1s 1 normal both ,
+    blinkTextCursor 500ms steps(40) infinite normal
+}
+
+@keyframes typewriter{
+    from{
+        width: 0;
+    }
+    to{
+        width: 18em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from{
+        border-right-color: rgba(255,255,255,0.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+
+/*about style*/
+.about {
+    background: url(creep.jpg) no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    height: 100vh;
+    position: relative;
+}
+
+.about .content {
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 50vw;
+}
+
+.about .content h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+.about .content p {
+    font-size: 1.2rem;
+    line-height: 30px;
+    font-weight: 100;
+    color: #bbb;
+}
+
+.hori-text {
+    position: absolute;
+    bottom: 100px;
+    right: 0px;
+    transform: rotate(90deg) ;
+  
+}
+
+.hori-text span {
+    letter-spacing: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.skill .bar {
+    margin: 10px 0;
+    display: block;
+    height: 10px;
+    width: 600px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ad5a99b5;
+}
+
+.skill .bar span {
+    float: left;
+    background: #A768BA;
+    height: 10px;
+    
+}
+.skill .bar .html 
+    {width: 90px;
+    animation: html 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+.skill .bar .css {
+    width: 100px;
+    animation: css 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+.skill .bar .js {width: 70px;
+    animation: js 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+
+}
+.skill .bar .english {
+    width: 100px;
+    animation: english 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+}
+
+
+@keyframes html{
+    0%{
+        width: 90px;
+    }
+    50%{
+        width: 110px;
+    }
+    100%{
+        width: 90px;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 70px;
+    }
+    50%{
+        width: 100px;
+    }
+    100%{
+        width: 70px;
+    }
+}
+
+@keyframes js{
+    0%{
+        width: 50px;
+    }
+    50%{
+        width: 70px;
+    }
+    100%{
+        width: 50px;
+    }
+}
+
+@keyframes english{
+    0%{
+        width: 90px;
+    }
+    50%{
+        width: 110px;
+    }
+    100%{
+        width: 90px;
+    }
+}
+
+/*work style*/
+.work {
+    margin:100px 0;
+    padding: 0 10vw;
+}
+
+.work h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 100px 0;
+}
+.work .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.work .container .box {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    padding: 30px;
+    position: relative;
+    transition:  transform .6s linear;
+    background-color: #000000;
+}
+
+.work img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.work h3{
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 20px;
+}
+
+.work p {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.work .content {
+    border: 1px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition:  transform .6s linear;
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.work .content img {
+    padding: 50px;
+}
+
+
+
+.work .back {
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(92, 88, 88), #000000);
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition:  transform .6s linear;
+    transform: perspective(600px) rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work .back button {
+        background: #020202;
+        padding: 10px 20px;
+        border: none;
+        margin: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        display: block;
+        cursor: pointer;
+        transition: .5s ease;
+}
+
+.work .back button:hover  {
+    background-color: #a09999;
+    margin-bottom: 30px;
+}
+.work .back a{
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+}
+
+
+.work .box:hover > .content {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.work .box:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
+}
+/*hobby style*/
+
+.carousel-theme img{
+    width: 50%;
+}
+
+.hobby{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    position: relative;
+}
+
+.gif {
+    position: absolute;
+    top: 0vh;
+    left: -12vh;
+    animation-delay: 1s;
+}
+.gif-right{
+    position: absolute;
+    bottom: 0;
+    right:0%;
+}
+
+.gif-left{
+    position: absolute;
+    bottom: 0;
+    left:0%;
+}
+.hobby .content h2 {
+    font-size: 3rem;
+    margin: 0 100px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+.hobby .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.z {
+    margin-top:100px;
+}
+
+.neon {
+    margin-left: 25px;
+    color: #ff005b;
+    text-shadow: 0 0 20px #ff005b;
+}
+
+
+#o {
+    color: #ff005b;
+    text-shadow: 0 0 20px #ff005b;
+}
+
+.hobby .items {
+    overflow: hidden;
+    position: relative;
+
+    
+}
+.hobby .items img{
+    opacity: 0.9;
+    transition: .3s ease-out;
+
+}
+.hobby .items img:hover {
+    transform: scale(1.2);
+}
+
+.owl-prev,.owl-next {
+    display: none;
+}
+
+
+
+.hobby span {
+    font-size: 3rem;
+}
+.hobby .btn {
+    position: relative;
+    padding: 30px;
+    width: 200px;
+    height: 80px;
+    background: transparent;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 1%;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.hobby .btn a {
+    font-size: 1.3rem;
+    color: #ff005b ;
+    text-transform: uppercase;
+}
+
+.hobby .btn:hover a{
+    color: #ce0d51 ;
+}
+
+
+
+.hobby .btn span {
+    position: absolute;
+    
+}
+.hobby .btn .top {
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    animation: top 2s;
+    background: linear-gradient(to right, transparent , #ff005b) ;
+    animation-iteration-count: infinite;
+}
+.hobby .btn .bottom {
+    top: 100%;
+    right: 0%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, transparent , #ff005b) ;
+    animation: bottom 2s;
+    animation-iteration-count: infinite;
+    transform: scale(-1);
+}
+
+.hobby .btn .left {
+    bottom:  0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, transparent , #ff005b) ;
+    animation: left 2s;
+    animation-iteration-count: infinite;
+}
+
+.hobby .btn .right {
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent , #ff005b) ;
+    animation: right 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes top {
+    0%{
+        width: 0;
+    }
+    25%{
+        width: 100%;
+    }
+    25.1%{
+        width: 0%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes right {
+    0%{
+        height:  0;
+    }
+    25%{
+        height: 0%;
+    }
+    50%{
+        height: 100%;
+    }
+    50.1%{
+        height: 0%;
+    }
+    100%{
+       height: 0%;
+    }
+}
+
+@keyframes bottom {
+    0%{
+        width:  0%;
+    }
+    50%{
+        width: 0%;
+    }
+    75%{
+        width: 100%;
+    }
+    75.1%{
+        width: 0%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes left {
+    0%{
+        height:  0;
+    }
+    75%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+/*Contact styles*/
+
+.contact {
+    background: #2e2e2e;
+    position: relative;
+}
+
+.contact h2 {
+    text-align: center;
+    padding: 100px;
+    font-size: 3rem;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+
+}
+.contact label {
+    margin: 30px 0;
+}
+
+.contact input {
+    width: 700px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.contact input:focus {
+    border: none;
+}
+
+.contact textarea{
+    width: 700px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.contact button {
+    margin: 100px ;
+    padding: 20px 30px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    transition: .4s ease;
+}
+
+.contact button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.contact .social-icons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 50vh;
+    right: 3vw;
+}
+.social-icons i { 
+    font-size: 2rem;
+    margin: 30px;
+    transition: .3s ease;
+}
+
+.social-icons i:hover{
+    transform: scale(1.5);
+    color: rgb(193, 151, 206);
+}
+
+footer {
+    background: #000;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    
+}
+footer button {
+    
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translate(-50%,-50%);
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+}
+
+footer i {
+    color: #fff;
+}
+
+footer p {
+    margin-top: 50px;
+}
+
+/*Reponsive*/
+@media(max-width:768px)
+{   
+    header{
+        height: 40vh;
+    }
+    
+    .brand {
+        margin-left: 30px;
+        
+    }
+    .brand h1 {
+        font-size: 3rem;
+    }
+    nav {
+        display: none;
+    }
+    .sologan {
+        top: 20%;
+    }
+    .hero h2{
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+    }
+    .about {
+      
+        margin: 0;
+    }
+    .about .content{
+        padding-top: 20px;
+        width: 90%;
+        padding-left: 20px;;
+    }
+    .about .content h2 {
+        font-size: 2rem;
+        padding-bottom: 0px;
+    }
+    .skill {
+        margin-left: 20px;
+    }
+    .skill .bar {
+        width: 90%;
+    }
+    .work .box {
+        margin: 50px;
+    }
+    .hobby .gif {
+        display: none;
+    }
+    .z, .e , .r {
+        display: none;
+    }
+    .contact form{
+        margin: 20px;
+    }
+    .contact input {
+        width: 90%;
+    }
+    .contact textarea {
+        width: 90%;
+    }
+    .contact button {
+        margin: 20px;
+        margin-bottom: 50px;
+    }
+    .contact .social-icons {
+        flex-direction: row;
+        bottom: 40px;
+        right: 10%;
+    }
+    .contact .social-icons i{
+        margin: 20px;
+    }
+}
